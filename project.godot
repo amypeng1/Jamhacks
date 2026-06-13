@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jamhacks"
-run/main_scene="uid://xqikcbk1pel1"
+run/main_scene="uid://b1s34t3h2uvrj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
