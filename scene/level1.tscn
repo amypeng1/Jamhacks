@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://xqikcbk1pel1"]
 
 [ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://assets/player/player.tscn" id="3_kjjd3"]
-[ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://assets/player/player.gd" id="4_e6f45"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_446fn"]
 load_path = "res://.godot/imported/spritesheet.png-9338ec4240ad7ecd72a458ce0ca93b4a.ctex"
@@ -117,9 +116,6 @@ texture = SubResource("CompressedTexture2D_446fn")
 [sub_resource type="TileSet" id="TileSet_qpk70"]
 sources/0 = SubResource("TileSetAtlasSource_xlg7c")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll5lq"]
-size = Vector2(18, 7.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17rxn"]
 size = Vector2(288, 33)
 
@@ -212,34 +208,23 @@ region_enabled = true
 region_rect = Rect2(13.984375, 6.0133767, 35.22853, 29.134142)
 
 [node name="desks" type="TileMapLayer" parent="TileMap" unique_id=600666604]
-z_index = 1
-y_sort_enabled = true
+z_index = 2
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAAEAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_33cqm")
 
 [node name="deskstaticbody2d" type="StaticBody2D" parent="TileMap/desks" unique_id=1647059205]
 z_index = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/desks/deskstaticbody2d" unique_id=526764644]
-y_sort_enabled = true
 position = Vector2(-104, 15)
 shape = SubResource("RectangleShape2D_5g16k")
 
 [node name="Objects" type="TileMapLayer" parent="TileMap" unique_id=490558513]
-z_index = 2
+z_index = 3
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD5//3/AAAGAAIAAAD5/wEAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_qpk70")
-
-[node name="CharacterBody2D" parent="TileMap" unique_id=772841815 instance=ExtResource("3_kjjd3")]
-position = Vector2(-2, 5)
-script = ExtResource("4_e6f45")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/CharacterBody2D" unique_id=1910097813]
-y_sort_enabled = true
-position = Vector2(3, -6.25)
-shape = SubResource("RectangleShape2D_ll5lq")
 
 [node name="wall static body" type="StaticBody2D" parent="TileMap" unique_id=82941994]
 
@@ -268,6 +253,7 @@ position = Vector2(1, 2)
 zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2114664910]
+z_index = 1
 y_sort_enabled = true
 position = Vector2(123, 27.999998)
 scale = Vector2(0.58593744, 0.65789473)
@@ -279,3 +265,7 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/StaticBody2D" unique_id=537120458]
 position = Vector2(1.1920929e-07, 6.0800033)
 shape = SubResource("CircleShape2D_17rxn")
+
+[node name="Player" parent="." unique_id=112640665 instance=ExtResource("3_kjjd3")]
+z_index = 1
+y_sort_enabled = true
