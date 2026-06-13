@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1dvspo7u0o36"
-path="res://.godot/imported/slime_green.png-f1f572f1b4d66639f56d25b0e9ed011e.ctex"
+uid="uid://dubopw3epcdra"
+path="res://.godot/imported/ballpurple3.png-7fd2b9f11b10a0e964996d6834ebcb21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sharedassets/sprites/slime_green.png"
-dest_files=["res://.godot/imported/slime_green.png-f1f572f1b4d66639f56d25b0e9ed011e.ctex"]
+source_file="res://assets/sprites/ballbot frames/ballpurple3.png"
+dest_files=["res://.godot/imported/ballpurple3.png-7fd2b9f11b10a0e964996d6834ebcb21.ctex"]
 
 [params]
 

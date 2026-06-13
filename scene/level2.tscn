@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://b1s34t3h2uvrj"]
 
-[ext_resource type="Texture2D" uid="uid://cm2n0w5lrhmnq" path="res://sharedassets/sprites/spritesheet.png" id="1_kj7ci"]
-[ext_resource type="Texture2D" uid="uid://h5j31pp4ywh2" path="res://sharedassets/sprites/doors.png" id="2_yilmc"]
-[ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://sharedassets/player/player.tscn" id="3_epjhv"]
-[ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://sharedassets/player/player.gd" id="4_vwck2"]
-[ext_resource type="Texture2D" uid="uid://bt55k4d3jewpk" path="res://sharedassets/sprites/ballbot/ballpurple1.png" id="5_68ptg"]
-[ext_resource type="Texture2D" uid="uid://bauaaxmxejr5x" path="res://sharedassets/sprites/ballbot/ballpurple2.png" id="6_cmtua"]
-[ext_resource type="Texture2D" uid="uid://dubopw3epcdra" path="res://sharedassets/sprites/ballbot/ballpurple3.png" id="7_nx5n0"]
-[ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://sharedassets/sprites/ballbot/ballpurple4.png" id="8_xbww7"]
+[ext_resource type="Texture2D" uid="uid://cm2n0w5lrhmnq" path="res://assets/sprites/spritesheet.png" id="1_kj7ci"]
+[ext_resource type="Texture2D" uid="uid://h5j31pp4ywh2" path="res://assets/sprites/doors.png" id="2_yilmc"]
+[ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://assets/player/player.tscn" id="3_epjhv"]
+[ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://assets/player/player.gd" id="4_vwck2"]
+[ext_resource type="Texture2D" uid="uid://bt55k4d3jewpk" path="res://assets/sprites/ballbot frames/ballpurple1.png" id="5_68ptg"]
+[ext_resource type="Texture2D" uid="uid://bauaaxmxejr5x" path="res://assets/sprites/ballbot frames/ballpurple2.png" id="6_cmtua"]
+[ext_resource type="Texture2D" uid="uid://dubopw3epcdra" path="res://assets/sprites/ballbot frames/ballpurple3.png" id="7_nx5n0"]
+[ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://assets/sprites/ballbot frames/ballpurple4.png" id="8_xbww7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_kj7ci")

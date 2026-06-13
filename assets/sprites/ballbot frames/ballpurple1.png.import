@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddd4s4508soab"
-path="res://.godot/imported/cat idle (2).png-8c27fa1cf15d3dd2ea323faf15e0890a.ctex"
+uid="uid://bt55k4d3jewpk"
+path="res://.godot/imported/ballpurple1.png-9895ea61426b9912eba0f8a064edf541.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sharedassets/player/images/cat idle (2).png"
-dest_files=["res://.godot/imported/cat idle (2).png-8c27fa1cf15d3dd2ea323faf15e0890a.ctex"]
+source_file="res://assets/sprites/ballbot frames/ballpurple1.png"
+dest_files=["res://.godot/imported/ballpurple1.png-9895ea61426b9912eba0f8a064edf541.ctex"]
 
 [params]
 

@@ -1,13 +1,13 @@
-[gd_scene format=4 uid="uid://xqikcbk1pel1"]
+[gd_scene format=4 uid="uid://bhhbqcd10d1ku"]
 
-[ext_resource type="Texture2D" uid="uid://cm2n0w5lrhmnq" path="res://assets/spritesheet.png" id="1_5kiuu"]
+[ext_resource type="Texture2D" uid="uid://cm2n0w5lrhmnq" path="res://assets/sprites/spritesheet.png" id="1_5kiuu"]
 [ext_resource type="Texture2D" uid="uid://h5j31pp4ywh2" path="res://assets/sprites/doors.png" id="2_dbls1"]
-[ext_resource type="Texture2D" uid="uid://bt55k4d3jewpk" path="res://assets/sprites/2/ballpurple1.png" id="3_xlg7c"]
-[ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://scene/player.gd" id="4_17rxn"]
-[ext_resource type="Texture2D" uid="uid://bauaaxmxejr5x" path="res://assets/sprites/2/ballpurple2.png" id="4_qpk70"]
-[ext_resource type="Texture2D" uid="uid://dubopw3epcdra" path="res://assets/sprites/2/ballpurple3.png" id="5_ll5lq"]
-[ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://assets/sprites/2/ballpurple4.png" id="6_17rxn"]
-[ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://scene/player.tscn" id="7_qpk70"]
+[ext_resource type="Texture2D" uid="uid://bt55k4d3jewpk" path="res://assets/sprites/ballbot frames/ballpurple1.png" id="3_xlg7c"]
+[ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://assets/player/player.gd" id="4_17rxn"]
+[ext_resource type="Texture2D" uid="uid://bauaaxmxejr5x" path="res://assets/sprites/ballbot frames/ballpurple2.png" id="4_qpk70"]
+[ext_resource type="Texture2D" uid="uid://dubopw3epcdra" path="res://assets/sprites/ballbot frames/ballpurple3.png" id="5_ll5lq"]
+[ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://assets/sprites/ballbot frames/ballpurple4.png" id="6_17rxn"]
+[ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://assets/player/player.tscn" id="7_qpk70"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_5kiuu")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcnnk0qtoj58j"
-path="res://.godot/imported/desk-essentials-preview.png-8b166322b00bae94b7eb77c2d3437f24.ctex"
+path="res://.godot/imported/desk-essentials-preview.png-c4eba61b655b8260e42583ee819ed7a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/desk-essentials-preview.png"
-dest_files=["res://.godot/imported/desk-essentials-preview.png-8b166322b00bae94b7eb77c2d3437f24.ctex"]
+source_file="res://assets/sprites/desk-essentials-preview.png"
+dest_files=["res://.godot/imported/desk-essentials-preview.png-c4eba61b655b8260e42583ee819ed7a3.ctex"]
 
 [params]
 
