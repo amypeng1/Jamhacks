@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b58nwxy8w4aa"]
+
+[ext_resource type="Texture2D" uid="uid://bnpw1ufwqkv3x" path="res://assets/backgrounds/2.png" id="1_m2ffg"]
+[ext_resource type="PackedScene" uid="uid://ni2xibxd8pmj" path="res://assets/player/player.tscn" id="2_arvm7"]
+[ext_resource type="Script" uid="uid://dhfp4sx23d3ml" path="res://assets/player/playerending.gd" id="3_gs8dr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m2ffg"]
+distance = -7.7873535
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bspfs"]
+distance = -570.97906
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_arvm7"]
+distance = -570.97906
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gs8dr"]
+distance = -323.17487
+
+[node name="outside" type="Node2D" unique_id=1445207339]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794630615]
+position = Vector2(1, 2)
+zoom = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1073930180]
+position = Vector2(0, 3)
+scale = Vector2(0.24869563, 0.2568269)
+texture = ExtResource("1_m2ffg")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=751745539]
+position = Vector2(1, 5)
+scale = Vector2(0.24869563, 0.2568269)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1785096948]
+position = Vector2(-4.0209794, 210.25835)
+shape = SubResource("WorldBoundaryShape2D_m2ffg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1061946174]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_bspfs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=337347454]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_arvm7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1610603662]
+rotation = -3.1415925
+shape = SubResource("WorldBoundaryShape2D_gs8dr")
+
+[node name="player" parent="." unique_id=112640665 instance=ExtResource("2_arvm7")]
+position = Vector2(-1, 51)
+script = ExtResource("3_gs8dr")

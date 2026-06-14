@@ -1,6 +1,6 @@
 extends Area2D
 
-const TARGET_SCENE = "res://scene/level3.tscn"
+const TARGET_SCENE = "res://scene/outside.tscn"
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -11,7 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Player hit the portal! Transporting to Outside")
 		
 		# Teleport the player immediately to the target level file
-		if Global.compdone == true:
+		if Global.touchgrass == true:
 			var error = get_tree().change_scene_to_file(TARGET_SCENE)
 			if error != OK:
 				print("Error: Could not load outside scene. Check your file path string!")
