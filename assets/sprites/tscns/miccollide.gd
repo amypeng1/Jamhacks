@@ -14,7 +14,7 @@ func _physics_process(_delta: float) -> void:
 		# If they hit the Enter key
 		if Input.is_action_just_pressed("ui_accept"):
 			interact_label.visible = false 
-			quiz_box.open_quiz("Ramen Noodle Challenge","What colour is Jam Jam?", "Purple", "Vomit Green", "Skid Mark Brown", "Pink Eye Rose", "Purple")
+			quiz_box.open_quiz("Karoake","Best Karoake Song", "I Want It That Way", "Baby", "Golden", "Love Story", "Baby")
 
 #detection enter
 func _on_body_entered(body: Node2D) -> void:

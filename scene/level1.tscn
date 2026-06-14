@@ -9,7 +9,9 @@
 [ext_resource type="Script" uid="uid://bqiso8xyqw8sk" path="res://assets/sprites/tscns/interactable_object.gd" id="5_ldwqa"]
 [ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://assets/sprites/ballbot frames/ballpurple4.png" id="6_3qsor"]
 [ext_resource type="PackedScene" uid="uid://tpuywsgggthu" path="res://assets/sprites/tscns/interactable_object.tscn" id="8_3ud3r"]
+[ext_resource type="PackedScene" uid="uid://oncsrjpfchbu" path="res://assets/sprites/tscns/portal_1.tscn" id="10_e6f45"]
 [ext_resource type="PackedScene" uid="uid://cgfm6vhrdkeb0" path="res://assets/sprites/tscns/quiz_pop_up.tscn" id="10_kjjd3"]
+[ext_resource type="Script" uid="uid://b87kni5fstu50" path="res://assets/sprites/tscns/portal_1.gd" id="11_3qsor"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_ebr37")
@@ -264,6 +266,11 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/StaticBody2D" unique_id=537120458]
 position = Vector2(1.1920929e-07, 6.0800033)
 shape = SubResource("CircleShape2D_17rxn")
+
+[node name="portal1" parent="." unique_id=185286228 instance=ExtResource("10_e6f45")]
+z_index = 1
+position = Vector2(-40, -61)
+script = ExtResource("11_3qsor")
 
 [node name="Quiz Pop Up" parent="." unique_id=1318982126 instance=ExtResource("10_kjjd3")]
 visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch342jxu8mby3"
-path="res://.godot/imported/badmic (1).png-cd682298b21ecb594e6ed67e426aa397.ctex"
+uid="uid://dr3ra0q6l4wqd"
+path="res://.godot/imported/passcomp.png-548a18121d10e38eadc66b3e7ccc4da9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/badmic (1).png"
-dest_files=["res://.godot/imported/badmic (1).png-cd682298b21ecb594e6ed67e426aa397.ctex"]
+source_file="res://assets/sprites/passcomp.png"
+dest_files=["res://.godot/imported/passcomp.png-548a18121d10e38eadc66b3e7ccc4da9.ctex"]
 
 [params]
 

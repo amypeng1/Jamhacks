@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c42hbwljrhite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1b55w"]
+size = Vector2(19, 91)
+
+[sub_resource type="LabelSettings" id="LabelSettings_es67v"]
+font_size = 8
+font_color = Color(0.745539, 0.3126033, 0.85056365, 1)
+shadow_size = 3
+shadow_color = Color(0.30081177, 0.056547746, 0.35585785, 1)
+
+[node name="miccollide" type="Area2D" unique_id=748565394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=808393594]
+position = Vector2(-0.5, 35.5)
+shape = SubResource("RectangleShape2D_1b55w")
+
+[node name="Label" type="Label" parent="." unique_id=1558510657]
+offset_left = -29.0
+offset_top = 29.0
+offset_right = 30.0
+offset_bottom = 52.0
+text = "[Enter] Interact"
+label_settings = SubResource("LabelSettings_es67v")

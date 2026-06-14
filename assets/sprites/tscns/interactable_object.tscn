@@ -8,7 +8,9 @@ size = Vector2(44.25, 30.375)
 
 [sub_resource type="LabelSettings" id="LabelSettings_oa3sx"]
 font_size = 8
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.745539, 0.3126033, 0.85056365, 1)
+shadow_size = 2
+shadow_color = Color(0.34685627, 0.07146401, 0.40896383, 1)
 
 [node name="Interactable Object" type="Area2D" unique_id=1460916073]
 

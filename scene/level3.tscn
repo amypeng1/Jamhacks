@@ -12,9 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://fj04byh6h1q2" path="res://assets/sprites/dancefloor3.png" id="8_7lb8k"]
 [ext_resource type="Texture2D" uid="uid://b0iryeh4ug6ef" path="res://assets/sprites/dancefloor4.png" id="9_6i17f"]
 [ext_resource type="Texture2D" uid="uid://b5iknukj4gkx2" path="res://assets/sprites/dancefloor5.png" id="10_wrpia"]
-[ext_resource type="Texture2D" uid="uid://ch342jxu8mby3" path="res://assets/sprites/badmic (1).png" id="11_3qsor"]
 [ext_resource type="Texture2D" uid="uid://chrxtykyyoot6" path="res://assets/sprites/makeshift_furnitureset.png" id="12_58agj"]
 [ext_resource type="Texture2D" uid="uid://boc7lj7npfptu" path="res://assets/sprites/midcentury_modern_furnitureset.png" id="13_g56iw"]
+[ext_resource type="Texture2D" uid="uid://d0q40lybdgufe" path="res://assets/sprites/goodmic.png" id="15_1crou"]
+[ext_resource type="PackedScene" uid="uid://c42hbwljrhite" path="res://assets/sprites/tscns/miccollide.tscn" id="16_mixx0"]
+[ext_resource type="Script" uid="uid://dwyvsjn5ewucp" path="res://assets/sprites/tscns/miccollide.gd" id="17_1crou"]
+[ext_resource type="PackedScene" uid="uid://cgfm6vhrdkeb0" path="res://assets/sprites/tscns/quiz_pop_up.tscn" id="17_mixx0"]
+[ext_resource type="PackedScene" uid="uid://br15m2it1xu88" path="res://assets/sprites/tscns/portal_3.tscn" id="19_1turj"]
+[ext_resource type="Script" uid="uid://br0olywgty3rk" path="res://assets/sprites/tscns/portal_3.gd" id="20_pj0nk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_ebr37")
@@ -485,8 +490,11 @@ region = Rect2(144, 192, 48, 48)
 atlas = ExtResource("5_ebr37")
 region = Rect2(192, 192, 48, 48)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1crou"]
+load_path = "res://.godot/imported/badmic (1).png-cd682298b21ecb594e6ed67e426aa397.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ooxuk"]
-atlas = ExtResource("11_3qsor")
+atlas = SubResource("CompressedTexture2D_1crou")
 region = Rect2(0, 0, 564, 562)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nh3y3"]
@@ -1887,14 +1895,10 @@ scale = Vector2(0.87630194, 0.9839181)
 position = Vector2(-88.998535, 12.42199)
 shape = SubResource("CircleShape2D_17rxn")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="micro" unique_id=1531811391]
-y_sort_enabled = true
-position = Vector2(-35.375935, -37.604755)
+[node name="Sprite2D" type="Sprite2D" parent="micro" unique_id=1138655277]
+position = Vector2(-35.375935, -37.60476)
 scale = Vector2(0.098468095, 0.089387216)
-sprite_frames = SubResource("SpriteFrames_yq8tf")
-animation = &"microphone"
-autoplay = "microphone"
-metadata/_edit_lock_ = true
+texture = ExtResource("15_1crou")
 
 [node name="Volunteer Static" type="StaticBody2D" parent="." unique_id=840693265]
 z_index = 1
@@ -1947,3 +1951,18 @@ animation = &"exec"
 autoplay = "exec"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=207274664]
+
+[node name="miccollide" parent="." unique_id=748565394 instance=ExtResource("16_mixx0")]
+z_index = 3
+position = Vector2(7, -13)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("17_1crou")
+
+[node name="Quiz Pop Up" parent="." unique_id=1318982126 instance=ExtResource("17_mixx0")]
+visible = false
+
+[node name="portal1" parent="." unique_id=185286228 instance=ExtResource("19_1turj")]
+z_index = 3
+position = Vector2(-2.9999924, -61.999992)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("20_pj0nk")

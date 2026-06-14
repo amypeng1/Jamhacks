@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://yc2jb34rvlu0" path="res://assets/sprites/tscns/quiz_pop_up.gd" id="1_h2mee"]
 [ext_resource type="Texture2D" uid="uid://uqie8m2mxtej" path="res://assets/sprites/ramen.png" id="2_hsr3m"]
+[ext_resource type="Texture2D" uid="uid://dr3ra0q6l4wqd" path="res://assets/sprites/passcomp.png" id="2_rd41o"]
+[ext_resource type="Texture2D" uid="uid://bfan34xar3eon" path="res://assets/sprites/failcomp.png" id="3_7788q"]
 [ext_resource type="Texture2D" uid="uid://cgtncoe2ncrbw" path="res://assets/sprites/spiltramen.png" id="3_qakyd"]
-[ext_resource type="Script" uid="uid://dp0dhevij3158" path="res://assets/sprites/tscns/wrong_answer.gd" id="3_rd41o"]
+[ext_resource type="Texture2D" uid="uid://d0q40lybdgufe" path="res://assets/sprites/goodmic.png" id="4_mtu2j"]
+[ext_resource type="Texture2D" uid="uid://kbp3oxoj03n6" path="res://assets/sprites/badmic.png" id="5_l3va6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2mee"]
 font_size = 50
@@ -17,9 +20,75 @@ font_size = 30
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_8tx08"]
+subpixel_positioning = 0
 
 [node name="Quiz Pop Up" type="CanvasLayer" unique_id=1318982126]
 script = ExtResource("1_h2mee")
+
+[node name="RightAnswer2" type="PanelContainer" parent="." unique_id=829431445]
+visible = false
+offset_left = 292.0
+offset_top = 132.5
+offset_right = 860.0
+offset_bottom = 515.5
+
+[node name="Sprite2D" type="Sprite2D" parent="RightAnswer2" unique_id=1094020089]
+position = Vector2(283, 183.5)
+texture = ExtResource("2_rd41o")
+
+[node name="WrongAnswer2" type="PanelContainer" parent="." unique_id=1990317039]
+visible = false
+offset_left = 292.0
+offset_top = 132.5
+offset_right = 860.0
+offset_bottom = 515.5
+
+[node name="Sprite2D" type="Sprite2D" parent="WrongAnswer2" unique_id=2070760785]
+position = Vector2(354, 209.49998)
+scale = Vector2(0.67021275, 0.7330962)
+texture = ExtResource("3_7788q")
+
+[node name="TryAgain2" type="Button" parent="WrongAnswer2" unique_id=944730239]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "  Click 
+ To Try  
+ Again!"
+flat = true
+alignment = 0
+
+[node name="RightAnswer3" type="PanelContainer" parent="." unique_id=1973723523]
+visible = false
+offset_left = 292.0
+offset_top = 132.5
+offset_right = 860.0
+offset_bottom = 515.5
+
+[node name="Sprite2D" type="Sprite2D" parent="RightAnswer3" unique_id=1874914694]
+position = Vector2(315, 187.5)
+scale = Vector2(0.7340425, 0.75622773)
+texture = ExtResource("4_mtu2j")
+
+[node name="WrongAnswer3" type="PanelContainer" parent="." unique_id=1278031640]
+visible = false
+offset_left = 292.0
+offset_top = 132.5
+offset_right = 860.0
+offset_bottom = 515.5
+
+[node name="Sprite2D" type="Sprite2D" parent="WrongAnswer3" unique_id=1594566962]
+position = Vector2(404.49997, 187)
+scale = Vector2(0.74999994, 0.7206406)
+texture = ExtResource("5_l3va6")
+
+[node name="TryAgain3" type="Button" parent="WrongAnswer3" unique_id=818235865]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "     Click 
+    To Try  
+    Again!"
+flat = true
+alignment = 0
 
 [node name="RightAnswer" type="PanelContainer" parent="." unique_id=1885117544]
 visible = false
@@ -38,7 +107,6 @@ offset_left = 292.0
 offset_top = 132.5
 offset_right = 860.0
 offset_bottom = 515.5
-script = ExtResource("3_rd41o")
 
 [node name="Sprite2D" type="Sprite2D" parent="WrongAnswer" unique_id=272938779]
 position = Vector2(354, 209.49998)
