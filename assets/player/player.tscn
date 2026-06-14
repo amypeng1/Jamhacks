@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ni2xibxd8pmj"]
 
 [ext_resource type="Script" uid="uid://bg1xn5e6or10t" path="res://assets/player/player.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://csxgjr5v5843f" path="res://assets/player/cat idle (1).png" id="2_v2miy"]
-[ext_resource type="Texture2D" uid="uid://vgd7ckfr34t" path="res://assets/player/catt1.png" id="3_ouxva"]
+[ext_resource type="Texture2D" uid="uid://csxgjr5v5843f" path="res://assets/sprites/cat idle (1).png" id="2_v2miy"]
+[ext_resource type="Texture2D" uid="uid://vgd7ckfr34t" path="res://assets/sprites/catt1.png" id="3_ouxva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5dr7"]
 atlas = ExtResource("2_v2miy")
@@ -173,12 +173,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_box"]
-size = Vector2(16, 16)
+size = Vector2(14, 15.875)
 
 [node name="Player" type="CharacterBody2D" unique_id=112640665]
 script = ExtResource("1_script")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1369105075]
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_bvphe")
 animation = &"runLeft"
 autoplay = "default"
@@ -186,5 +187,5 @@ frame = 1
 frame_progress = 0.20448652
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1370531157]
-position = Vector2(-1, 4)
+position = Vector2(0, -0.0625)
 shape = SubResource("RectangleShape2D_box")

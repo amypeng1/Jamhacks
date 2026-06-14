@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cgfm6vhrdkeb0"]
+
+[ext_resource type="Script" uid="uid://yc2jb34rvlu0" path="res://assets/sprites/tscns/quiz_pop_up.gd" id="1_h2mee"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6do1q"]
+font_size = 10
+
+[sub_resource type="SystemFont" id="SystemFont_8tx08"]
+
+[node name="Quiz Pop Up" type="CanvasLayer" unique_id=1318982126]
+script = ExtResource("1_h2mee")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1158892272]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -20.5
+offset_right = 120.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1362490510]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1327937328]
+layout_mode = 2
+text = "Ramen Cooking Station"
+horizontal_alignment = 1
+max_lines_visible = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1454797940]
+layout_mode = 2
+text = "What colour is Jam Jam?"
+label_settings = SubResource("LabelSettings_6do1q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option A" type="Button" parent="PanelContainer/VBoxContainer" unique_id=632647883]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Purple"
+
+[node name="Option B" type="Button" parent="PanelContainer/VBoxContainer" unique_id=669138337]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Vomit Green"
+
+[node name="Option C" type="Button" parent="PanelContainer/VBoxContainer" unique_id=378989421]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Skid mark brown"
+
+[node name="Option D" type="Button" parent="PanelContainer/VBoxContainer" unique_id=461108038]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_8tx08")
+theme_override_font_sizes/font_size = 8
+text = "Pink Eye Rose"

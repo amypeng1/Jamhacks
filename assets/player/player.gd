@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D 
 var a = 0
+var current_interactable: Area2D = null
 const SPEED = 100.0
 
 func _physics_process(_delta: float) -> void:

@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bt55k4d3jewpk" path="res://assets/sprites/ballbot frames/ballpurple1.png" id="3_ldwqa"]
 [ext_resource type="Texture2D" uid="uid://bauaaxmxejr5x" path="res://assets/sprites/ballbot frames/ballpurple2.png" id="4_kjjd3"]
 [ext_resource type="Texture2D" uid="uid://dubopw3epcdra" path="res://assets/sprites/ballbot frames/ballpurple3.png" id="5_e6f45"]
+[ext_resource type="Script" uid="uid://bqiso8xyqw8sk" path="res://assets/sprites/tscns/interactable_object.gd" id="5_ldwqa"]
 [ext_resource type="Texture2D" uid="uid://ck63qoms2xkib" path="res://assets/sprites/ballbot frames/ballpurple4.png" id="6_3qsor"]
+[ext_resource type="PackedScene" uid="uid://tpuywsgggthu" path="res://assets/sprites/tscns/interactable_object.tscn" id="8_3ud3r"]
+[ext_resource type="PackedScene" uid="uid://cgfm6vhrdkeb0" path="res://assets/sprites/tscns/quiz_pop_up.tscn" id="10_kjjd3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_ebr37")
@@ -57,8 +60,18 @@ texture = ExtResource("1_ebr37")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dbls1")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ldwqa"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kjjd3"]
+distance = -143.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e6f45"]
+distance = -144.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3qsor"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5g16k"]
-size = Vector2(32, 92)
+size = Vector2(32, 85)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlg7c"]
 texture = ExtResource("1_ebr37")
@@ -116,19 +129,8 @@ texture = ExtResource("1_ebr37")
 [sub_resource type="TileSet" id="TileSet_qpk70"]
 sources/0 = SubResource("TileSetAtlasSource_xlg7c")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_17rxn"]
-size = Vector2(288, 33)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ym5sv"]
-normal = Vector2(-1, 0)
-distance = -265.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sng2h"]
-normal = Vector2(0.99986994, -0.016126934)
-distance = -24.013008
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yq8tf"]
-distance = 3.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebr37"]
+size = Vector2(10, 4)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yq8tf"]
 animations = [{
@@ -172,6 +174,26 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAD3//v/AAAOAAIAAAD3//z/AAAOAAMAAAD4//v/AAAPAAIAAAD4//z/AAAPAAMAAAD5//v/AAAOAAIAAAD5//z/AAAOAAMAAAD6//v/AAAPAAIAAAD6//z/AAAPAAMAAAD7//v/AAAOAAIAAAD7//z/AAAOAAMAAAD8//v/AAAPAAIAAAD8//z/AAAPAAMAAAD9//v/AAAOAAIAAAD9//z/AAAOAAMAAAD+//v/AAAPAAIAAAD+//z/AAAPAAMAAAD///v/AAAOAAIAAAD///z/AAAOAAMAAAAAAPv/AAAPAAIAAAAAAPz/AAAPAAMAAAABAPv/AAAOAAIAAAABAPz/AAAOAAMAAAACAPv/AAAPAAIAAAADAPv/AAAOAAIAAAADAPz/AAAOAAMAAAAEAPv/AAAPAAIAAAAEAPz/AAAPAAMAAAAFAPv/AAAOAAIAAAAFAPz/AAAOAAMAAAAGAPv/AAAPAAIAAAAGAPz/AAAPAAMAAAAHAPv/AAAOAAIAAAAHAPz/AAAOAAMAAAAIAPv/AAAPAAIAAAAIAPz/AAAPAAMAAAACAPz/AAAPAAMAAAA=")
 tile_set = SubResource("TileSet_33cqm")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap/Wall" unique_id=1959783576]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Wall/StaticBody2D" unique_id=102023826]
+position = Vector2(0, 81)
+shape = SubResource("WorldBoundaryShape2D_ldwqa")
+debug_color = Color(0.877009, 0, 0.3568316, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/Wall/StaticBody2D" unique_id=384837332]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_kjjd3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/Wall/StaticBody2D" unique_id=387495336]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_e6f45")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/Wall/StaticBody2D" unique_id=851062772]
+position = Vector2(0, -47)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_3qsor")
+
 [node name="CanvasGroup" type="CanvasGroup" parent="TileMap" unique_id=921062395]
 
 [node name="officedoor" type="Sprite2D" parent="TileMap/CanvasGroup" unique_id=737736166]
@@ -199,7 +221,7 @@ region_rect = Rect2(13.984375, 6.0133767, 35.22853, 29.134142)
 z_index = 1
 y_sort_enabled = true
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAAEAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD5/wIAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wAAAAAAAAAAAAD5////AAAAAAAAAAD5//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_33cqm")
 
 [node name="deskstaticbody2d" type="StaticBody2D" parent="TileMap/desks" unique_id=1647059205]
@@ -207,7 +229,7 @@ z_index = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/desks/deskstaticbody2d" unique_id=526764644]
 y_sort_enabled = true
-position = Vector2(-104, 15)
+position = Vector2(-104, 11.5)
 shape = SubResource("RectangleShape2D_5g16k")
 
 [node name="Objects" type="TileMapLayer" parent="TileMap" unique_id=490558513]
@@ -216,34 +238,19 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD5//3/AAAGAAIAAAD5/wEAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_qpk70")
 
-[node name="wall static body" type="StaticBody2D" parent="TileMap" unique_id=82941994]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/wall static body" unique_id=1650029612]
-y_sort_enabled = true
-position = Vector2(0, -64.5)
-shape = SubResource("RectangleShape2D_17rxn")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/wall static body" unique_id=251451504]
-y_sort_enabled = true
-position = Vector2(-120, 8)
-shape = SubResource("WorldBoundaryShape2D_ym5sv")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/wall static body" unique_id=447280406]
-y_sort_enabled = true
-position = Vector2(-120, 8)
-shape = SubResource("WorldBoundaryShape2D_sng2h")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/wall static body" unique_id=1006786350]
-y_sort_enabled = true
-position = Vector2(-2, 82)
-shape = SubResource("WorldBoundaryShape2D_yq8tf")
-
 [node name="player" parent="TileMap" unique_id=772841815 instance=ExtResource("3_kjjd3")]
-position = Vector2(-2, 5)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/player" unique_id=2006233251]
+position = Vector2(-7, -1)
+shape = SubResource("RectangleShape2D_ebr37")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1205471000]
 position = Vector2(1, 2)
 zoom = Vector2(4, 4)
+
+[node name="Interactable Object" parent="." unique_id=1460916073 instance=ExtResource("8_3ud3r")]
+position = Vector2(68, 63)
+script = ExtResource("5_ldwqa")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2114664910]
 y_sort_enabled = true
@@ -257,3 +264,6 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/StaticBody2D" unique_id=537120458]
 position = Vector2(1.1920929e-07, 6.0800033)
 shape = SubResource("CircleShape2D_17rxn")
+
+[node name="Quiz Pop Up" parent="." unique_id=1318982126 instance=ExtResource("10_kjjd3")]
+visible = false

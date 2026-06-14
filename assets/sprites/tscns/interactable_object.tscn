@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://tpuywsgggthu"]
+
+[ext_resource type="Texture2D" uid="uid://cm2n0w5lrhmnq" path="res://assets/sprites/spritesheet.png" id="1_yyaqj"]
+[ext_resource type="Texture2D" uid="uid://uqie8m2mxtej" path="res://assets/sprites/ramen.png" id="2_cjkln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjkln"]
+size = Vector2(44.25, 30.375)
+
+[node name="Interactable Object" type="Area2D" unique_id=1460916073]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=922041419]
+position = Vector2(-1.1920929e-07, -1.1920929e-07)
+scale = Vector2(1.3983886, 1.1096609)
+texture = ExtResource("1_yyaqj")
+region_enabled = true
+region_rect = Rect2(0, 0, 34, 29.5)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2121936077]
+position = Vector2(-1.1920929e-07, -1.1920929e-07)
+scale = Vector2(1.3983886, 1.1096609)
+
+[node name="Ramen" type="Sprite2D" parent="." unique_id=2054437245]
+position = Vector2(0, -9.999999)
+scale = Vector2(0.05062332, 0.052871615)
+texture = ExtResource("2_cjkln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=510934917]
+position = Vector2(-1.125, -0.1875)
+shape = SubResource("RectangleShape2D_cjkln")
