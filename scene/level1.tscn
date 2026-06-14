@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://oncsrjpfchbu" path="res://assets/sprites/tscns/portal_1.tscn" id="10_e6f45"]
 [ext_resource type="PackedScene" uid="uid://cgfm6vhrdkeb0" path="res://assets/sprites/tscns/quiz_pop_up.tscn" id="10_kjjd3"]
 [ext_resource type="Script" uid="uid://b87kni5fstu50" path="res://assets/sprites/tscns/portal_1.gd" id="11_3qsor"]
+[ext_resource type="PackedScene" uid="uid://i81timybf43i" path="res://assets/sprites/tscns/instructions.tscn" id="13_6i17f"]
+[ext_resource type="Script" uid="uid://cj1crxpcai" path="res://assets/sprites/tscns/instructions.gd" id="14_wrpia"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbls1"]
 texture = ExtResource("1_ebr37")
@@ -274,3 +276,6 @@ script = ExtResource("11_3qsor")
 
 [node name="Quiz Pop Up" parent="." unique_id=1318982126 instance=ExtResource("10_kjjd3")]
 visible = false
+
+[node name="Quiz Pop Up2" parent="." unique_id=351941233 instance=ExtResource("13_6i17f")]
+script = ExtResource("14_wrpia")
