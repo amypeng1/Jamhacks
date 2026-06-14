@@ -6,6 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjkln"]
 size = Vector2(44.25, 30.375)
 
+[sub_resource type="LabelSettings" id="LabelSettings_oa3sx"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
 [node name="Interactable Object" type="Area2D" unique_id=1460916073]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=922041419]
@@ -27,3 +31,11 @@ texture = ExtResource("2_cjkln")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=510934917]
 position = Vector2(-1.125, -0.1875)
 shape = SubResource("RectangleShape2D_cjkln")
+
+[node name="Label" type="Label" parent="." unique_id=1870943309]
+offset_left = -31.0
+offset_top = -35.0
+offset_right = 30.0
+offset_bottom = -23.0
+text = "[Enter] Interact"
+label_settings = SubResource("LabelSettings_oa3sx")
