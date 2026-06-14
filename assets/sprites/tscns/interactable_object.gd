@@ -10,6 +10,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	# Check if the player is currently standing in this table's area
 	if is_player_nearby():
+		
 		# If they hit the Enter key
 		if Input.is_action_just_pressed("ui_accept"):
 			# Pop up the full quiz layout with your custom question!
